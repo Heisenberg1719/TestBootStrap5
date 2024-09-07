@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}History{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="display-4">Transaction History</h2>
+    <p class="lead">Here are your past transactions.</p>
+
+    <!-- Dummy Table for Today's Transactions -->
+    <h3 class="title-animation">Today's Transactions</h3>
+    <div class="card">
+        <div class="card-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Username</th>
+                        <th>Amount</th>
+                        <th>Transaction Date</th>
+                        <th>UTR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dummy rows -->
+                    <tr>
+                        <td>1</td>
+                        <td>alice123</td>
+                        <td>$150.00</td>
+                        <td>2024-09-07</td>
+                        <td>UTR5678901234</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>bob456</td>
+                        <td>$320.00</td>
+                        <td>2024-09-07</td>
+                        <td>UTR9876543210</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>charlie789</td>
+                        <td>$200.00</td>
+                        <td>2024-09-07</td>
+                        <td>UTR1122334455</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>david012</td>
+                        <td>$75.00</td>
+                        <td>2024-09-07</td>
+                        <td>UTR6677889900</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Send Money{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2 class="display-4 mb-4">Send Money</h2>
+    <p class="lead mb-4">Enter details to send money.</p>
+
+    <div class="row mb-4">
+        <!-- Wallet Balance Card -->
+        <div class="col-md-6">
+            <div class="card wallet-card">
+                <div class="card-body">
+                    <h4 class="card-title">Wallet Balance</h4>
+                    <p class="card-text">$1,500.00</p> <!-- Dummy value for wallet balance -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Total Pending Balance Card -->
+        <div class="col-md-6">
+            <div class="card pending-card">
+                <div class="card-body">
+                    <h4 class="card-title">Total Pending Balance</h4>
+                    <p class="card-text">$300.00</p> <!-- Dummy value for total pending balance -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Send Money Form -->
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Send Money</h4>
+            <form action="{{ url_for('send_money') }}" method="POST">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="number">Phone Number</label>
+                    <input type="text" class="form-control" id="number" name="number" required>
+                </div>
+                <div class="form-group">
+                    <label for="account_number">Account Number</label>
+                    <input type="text" class="form-control" id="account_number" name="account_number" required>
+                </div>
+                <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <input type="number" class="form-control" id="amount" name="amount" required>
+                </div>
+                <div class="form-group">
+                    <label for="ifsc">IFSC Code</label>
+                    <input type="text" class="form-control" id="ifsc" name="ifsc" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Confirm</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

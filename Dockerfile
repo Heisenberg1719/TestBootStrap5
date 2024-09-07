@@ -14,4 +14,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8080
 
 # Run the application with python3 main.py
-CMD ["python3", "serve.py"]
+CMD ["python3", "main.py"]

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>So-True Pay</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <link href="{{ url_for('static', filename='assets/img/favicon.png') }}" rel="icon">
+    
+    <link href="{{ url_for('static', filename='assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    
+  <!-- Bootstrap Icons -->
+  <link href="{{ url_for('static', filename='assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  
+  <!-- AOS CSS -->
+  <link href="{{ url_for('static', filename='assets/vendor/aos/aos.css') }}" rel="stylesheet">
+  
+  <!-- GLightbox CSS -->
+  <link href="{{ url_for('static', filename='assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  
+  <!-- Swiper CSS -->
+  <link href="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{{ url_for('static', filename='assets/css/main.css') }}" rel="stylesheet">
+
+
+</head>
+<style>
+         .card-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .card {
+            background-size: cover !important;
+            background-position: center !important;
+            
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 10px;
+        }
+    .img-fluid {
+    max-width: 100%;
+    height: auto;
+    
+}
+
+.typewriter h3 {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(30, end), blink-caret .5s step-end infinite;
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+  to {
+    width: 100%
+  }
+}
+</style>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">So-True Pay</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/login">Sign In</a></li>
+       
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background" >
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center text-center" data-aos="zoom-out">
+            <div class="typewriter">
+              <h3>Welcome To So-True Pay</h3>
+            </div>
+            <p>Play Chess, Rummy, and Ludo with exciting skins and win rewards!</p>
+            <div class="d-flex justify-content-center">
+              <a href="/login" class="btn-get-started">Get Started</a>
+            </div>
+          </div>
+          <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="200">
+            <img src="{{ url_for('static', filename='assets/img/heroBack.jpeg') }}" class="img-fluid animated" style="border-radius: 2rem;"alt="Hero Image">
+          </div>
+        </div>
+      </div>
+      
+    </section>
+
+<section id="services" class="services section ">
+
+  <!-- Section Title -->
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Popular Games</h2>
+    <p></p>
+    <span><b>Our service to clients like Ludo,Chess,RummyCircle includes:</b></span>
+  </div>
+
+  <div class="container">
+
+    <div class="row gy-4">
+
+      <div class="row">
+        <!-- Chess Card -->
+        <div class="col-xl-4 col-md-6 d-flex flex-column align-items-center mb-4">
+          <div class="card" style="width: 100%; height: 100%;">
+            <div class="card-body p-0">
+              <img src="{{ url_for('static', filename='assets/img/chess.jpeg') }}" class="card-img-top img-fluid" alt="Chess Image" style="height: 350px; object-fit: cover;">
+            </div>
+            <div class="card-footer text-center">
+              <h5 class="mb-2">Chess</h5>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Ludo Card -->
+        <div class="col-xl-4 col-md-6 d-flex flex-column align-items-center mb-4">
+          <div class="card" style="width: 100%; height: 100%;">
+            <div class="card-body p-0">
+              <img src="{{ url_for('static', filename='assets/img/ludo.jpeg') }}" class="card-img-top img-fluid" alt="Ludo Image" style="height: 350px; object-fit: cover;">
+            </div>
+            <div class="card-footer text-center">
+              <h5 class="mb-2">Ludo</h5>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Rummy Card -->
+        <div class="col-xl-4 col-md-6 d-flex flex-column align-items-center mb-4">
+          <div class="card" style="width: 100%; height: 100%;">
+            <div class="card-body p-0">
+              <img src="{{ url_for('static', filename='assets/img/rummy.jpeg') }}" class="card-img-top img-fluid" alt="Rummy Image" style="height: 350px; object-fit: cover;">
+            </div>
+            <div class="card-footer text-center">
+              <h5 class="mb-2">Rummy</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
+      </div>
+  </div>
+</section>
+
+<section id="skills" class="skills section">
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- <div class="row"> -->
+      <div class="col-lg-12 pt-4 pt-lg-0 content text-center">
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Why Choose Us</h2>
+        </div>
+        <div class="row justify-content-center mt-4">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-shield-check" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">Bot Detection</h5>
+              <p class="card-text">Advanced bot detection ensures fair gameplay and protects players from cheating.</p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-wallet" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">Secure Wallet</h5>
+              <p class="card-text">Keep your funds secure with our encrypted wallet system, ensuring safe transactions.</p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-lock" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">SSL Encryption</h5>
+              <p class="card-text">All your data is protected using SSL encryption for ultimate privacy and security.</p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-credit-card" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">Secure Payments</h5>
+              <p class="card-text">Fast, reliable, and secure payment gateways to keep you in the game without hassle.</p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-headset" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">24/7 Support</h5>
+              <p class="card-text">Our support team is available 24/7 to assist you with any issues or questions you may have.</p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card border rounded text-center p-3 h-100">
+              <div class="icon mb-2">
+                <i class="bi bi-award" style="font-size: 2rem; color: #007bff;"></i>
+              </div>
+              <h5 class="card-title">Fair Play</h5>
+              <p class="card-text">We guarantee fair play in all games, ensuring an enjoyable experience for everyone.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    <!-- </div> -->
+  </div>
+</section>
+    <!-- Why Us Section -->
+    <section id="why-us" class="section why-us " data-builder="section">
+
+      <div class="container section-title aos-init aos-animate">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
+
+            <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+              <h3><strong>Robust Security and Wallet Management Solutions</strong></h3>
+              <p>
+                At So-True Pay, we prioritize security and efficiency in all our payment solutions. Our advanced security features and comprehensive wallet management options ensure a seamless and safe experience for your users.
+              </p>
+            </div>
+
+            <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+
+              <div class="faq-item faq-active">
+                <h3><span>01</span> Top-Notch Security</h3>
+                <div class="faq-content">
+                  <p>Implementing cutting-edge encryption, secure authentication, and real-time fraud detection to protect user data and financial transactions.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div><!-- End Faq item-->
+
+              <div class="faq-item">
+                <h3><span>02</span> Advanced Wallet Solutions</h3>
+                <div class="faq-content">
+                  <p>Robust wallet management systems that include balance tracking, transaction history, and easy deposits and withdrawals, all designed to enhance user convenience.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+              <div class="faq-item">
+                <h3><span>03</span> Customizable Security Features</h3>
+                <div class="faq-content">
+                  <p>Tailor security measures to meet specific needs and regulatory requirements, ensuring compliance and peace of mind.</p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+              <div class="faq-item">
+                <h3><span>04</span> Continuous Monitoring</h3>
+                <div class="faq-content">
+                  <p>Regularly updated security protocols and continuous monitoring to detect and prevent potential threats, keeping your platform secure.
+                  </p>
+                </div>
+                <i class="faq-toggle bi bi-chevron-right"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-5 order-1 order-lg-2 why-us-img">
+            <img src="{{ url_for('static', filename='assets/img/teamhappy.jpeg') }}" class="img-fluid" alt="" data-aos="zoom-in" data-aos-delay="100">
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Why Us Section -->
+
+
+      <!-- About Section -->
+      <section id="about" class="about section">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>About Us</h2>
+        </div><!-- End Section Title -->
+  
+        <div class="container">
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+              <p>
+                At So-True Pay, we are dedicated to providing innovative and reliable payment solutions to businesses across various industries. Our expertise in payment gateways, security, and wallet management enables us to offer top-notch services that cater to the specific needs of our clients.
+              </p>
+              <ul>
+                <li><i class="bi bi-check2-circle"></i> <span>With a commitment to excellence and a focus on customer satisfaction.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>we work closely with our clients to deliver tailored solutions that drive growth and success.</span></li>
+                <li><i class="bi bi-check2-circle"></i> <span>Our team of experienced professionals is always ready to assist and ensure that your payment processes run smoothly and efficiently.</span></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <p>Our commitment to security and efficient wallet management ensures that you can focus on providing exceptional service while we handle the complexities of secure payment processing and user fund management. </p>
+              <a href="#" class="read-more"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </section><!-- /About Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Contact</h2>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-5">
+
+            <div class="info-wrap">
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
+                <i class="bi bi-geo-alt flex-shrink-0"></i>
+                <div>
+                  <h3>Address</h3>
+                  <p>So-True Pay Ltd.
+                    123 Payment Ave,
+                    Suite 456,
+                    Fintech City, FT 78901
+                    Country Name</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+                <i class="bi bi-telephone flex-shrink-0"></i>
+                <div>
+                  <h3>Call Us</h3>
+                  <p>+1 5589 55488 55</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+                <i class="bi bi-envelope flex-shrink-0"></i>
+                <div>
+                  <h3>Email Us</h3>
+                  <p>contact@dhisnyasoft.com</p>
+                </div>
+              </div><!-- End Info Item -->
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d119184.30715399303!2d78.4746833!3d17.385044!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf4ec97c4d927%3A0xb5c1dfe8495b0a9!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1676961268712!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <label for="name-field" class="pb-2">Your Name</label>
+                  <input type="text" name="name" id="name-field" class="form-control" required="">
+                </div>
+
+                <div class="col-md-6">
+                  <label for="email-field" class="pb-2">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="subject-field" class="pb-2">Subject</label>
+                  <input type="text" class="form-control" name="subject" id="subject-field" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <label for="message-field" class="pb-2">Message</label>
+                  <textarea class="form-control" name="message" rows="10" id="message-field" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter container section-title aos-init aos-animate">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="forms/newsletter.php" method="post" class="php-email-form">
+              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="index.html" class="d-flex align-items-center">
+            <span class="sitename">So-True Pay</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>So-True Pay Ltd.</p>
+            <p>123 Payment Ave,Suite 456,Fintech City, FT 78901</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>contact@dhisnyasoft.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Multi-Regional Payment Methods</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Advanced Fraud Detection</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Seamless Integration</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Customizable Solutions</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Real-Time Analytics</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">So-True Pay</strong> <span>All Rights Reserved</span></p>
+    
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <script src="{{ url_for('static', filename='assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/php-email-form/validate.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/aos/aos.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/waypoints/noframework.waypoints.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/imagesloaded/imagesloaded.pkgd.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+    
+    <!-- Main JS File -->
+    <script src="{{ url_for('static', filename='assets/js/main.js') }}"></script>
+
+</body>
+
+</html>
